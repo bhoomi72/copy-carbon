@@ -1,15 +1,17 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCTd_vLcV8gjJypHNI5BqGhTaYeV5Gseyg",
-  authDomain: "carbonlens-886c2.firebaseapp.com",
-  projectId: "carbonlens-886c2",
-  storageBucket: "carbonlens-886c2.firebasestorage.app",
-  messagingSenderId: "596490131780",
-  appId: "1:596490131780:web:60f21872295dd77ac85f11",
-  measurementId: "G-C0GVKXK2KC"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
+
 export const auth = getAuth(app);
+export const db = getFirestore(app);
