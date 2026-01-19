@@ -1,16 +1,87 @@
-# React + Vite
+# 🌍 Carbon Emission Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **web-based carbon emission tracker** built to help users measure and monitor their personal carbon footprints from daily activities, visualize progress, and gain actionable tips to reduce emissions.
 
-Currently, two official plugins are available:
+This project was built as a **hackathon MVP** using React, Firebase Auth, Firestore (future), and backend services — focused on rapid prototyping and real-world usability.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📌 Problem Statement
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+With climate change worsening, individuals need tools to understand and reduce their environmental impact. This platform enables users to:
 
-## Expanding the ESLint configuration
+- Log daily activity details (transport, electricity, food)
+- Calculate carbon emissions from each activity
+- Visualize emission breakdowns with interactive charts
+- Track progress over time (daily, weekly, monthly)
+- Get recommendations to reduce footprint
+- Manage profiles and sessions via authentication
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧠 Key Features
+
+### ✅ Authentication
+- Login & logout powered by **Firebase Auth**
+- User profile page showing email and session management
+
+### 📊 Emission Tracking
+- Users input daily activities:
+  - Transport (km)
+  - Electricity usage (kWh)
+  - Food type (veg/non-veg)
+- Emission estimates computed using standard emission coefficients
+
+### 📈 Interactive Analytics
+- Dashboard with pie charts for emission breakdown
+- Analytics page showing emission trends over time
+- History tracking enabling weekly/monthly aggregation (with Firestore backend)
+
+### 🛠 Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | React + Vite |
+| UI Visualization | Chart.js + react-chartjs-2 |
+| Routing | react-router-dom |
+| Auth | Firebase Authentication |
+| Backend API | Node.js + Express (future) |
+| Database | Firestore (future per-user storage) |
+
+---
+
+## 📦 Getting Started (Frontend)
+
+1. Clone repository
+bash
+git clone https://github.com/2024bhoomisingh/Carbon-emission-tracker.git
+cd Carbon-emission-tracker
+
+2. Install dependencies
+
+Copy code
+bash
+npm install
+3. Start development server
+Copy code
+Bash
+npm run dev
+4. Visit in browser
+Open at: http://localhost:5173/
+
+🧪 Usage
+Register / Login using Firebase credentials
+Navigate dashboard to input daily activities
+View breakdown charts and analytics
+Go to Profile to view user email and logout
+
+## 🔮 Future Scope
+
+- **AI-Powered Recommendation Chatbot**  
+  A conversational chatbot can be integrated into the Recommendations page to analyze user activity data and provide personalized, interactive suggestions for reducing carbon emissions.
+
+- **UI / UX Enhancements**  
+  The user interface can be further improved with a modern, responsive design, better visual hierarchy, and accessibility-focused enhancements to improve overall user experience.
+
+- **Location-Based Alerts & Reminders**  
+  Location-aware features can be added to send smart reminders, emission alerts, and eco-friendly transport suggestions based on user movement and regional context.
